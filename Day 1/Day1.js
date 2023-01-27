@@ -16,7 +16,12 @@
 
 // console.error()
 //      The console.error() method outputs an error message to the Web console.  
-     console.error()
+     var age=17
+     if (age>=21) {
+        console.log("you are eligible for vote")
+     } else {
+        console.error("you are not eligible for vote")
+     }
 
 // ---------------------------------------------------------------------------------------------
 //CONVERSION
@@ -48,6 +53,8 @@ typeof(f)                      //number
     // Create a single object using object literal
     // using new keyword
     // using Object.create()
+    // using Object.assign()
+    // using classes
 
     var employee={
         name:"Praveen",
@@ -57,6 +64,29 @@ typeof(f)                      //number
     var person=new Object()
     person.name="Praveen";
     person.age=25
+
+    var a={name:"john"}
+    var m = Object.create(a, { sub: {value: 'abc'} , std: {value: 'c'}})
+    console.log(m);
+
+    const object1 = {  
+        a: 1,  
+        b: 2,  
+        c: 3  
+      };  
+      const object3= {  
+        g: 1,  
+        h: 2,  
+        i: 3  
+      };    
+        
+      const object2 = Object.assign({c: 4, d: 5}, object1);  
+      const object4 = Object.assign({g: 34, h: 25}, object3);  
+      console.log(object2.c, object2.d);    // 3,5
+      console.log(object4.g, object4.h);    // 1,2
+
+
+   
 
 // use strict
   //  It helps you to write cleaner code,like preventing you from using undeclared variables.
