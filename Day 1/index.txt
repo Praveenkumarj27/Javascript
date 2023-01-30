@@ -13,9 +13,4 @@ It is basically a NPM package runner,which allows us to run JavaScript packages 
 that if you only need to use something just once NPX is perfect,and package pollution is not a concern.
 
 
-
-While loop and do while loop
-    The do...while statements combo defines a code block to be executed once, and repeated as long as a 
-condition is true.
-    The do...while is used when you want to run a code block at least one time.
   
