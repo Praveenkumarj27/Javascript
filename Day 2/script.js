@@ -62,13 +62,19 @@ function doConvert(numberInput) {
     "ninety",
   ];
 
-  let num = ("0000000" + numberInput)
-    .slice(-7)
-    .match(/^(\d{1})(\d{1})(\d{2})(\d{1})(\d{2})$/);
-  // console.log(num);
+  let outputText;
+  if (numberInput == 0) {
+    return (outputText = 'zero');
+  } else {
+   var num = ('0000000' + numberInput)
+      .slice(-7)
+      .match(/^(\d{1})(\d{1})(\d{2})(\d{1})(\d{2})$/);
+      console.log(num);
+  }
+ 
   if (!num) return;
 
-  let outputText =
+   outputText =
     num[1] != 0
       ? (oneToTwenty[Number(num[1])] ||
           `${tenth[num[1][0]]} ${oneToTwenty[num[1][1]]}`) + " million "
@@ -95,10 +101,10 @@ function doConvert(numberInput) {
         `${tenth[num[5][0]]} ${oneToTwenty[num[5][1]]} `
       : "";
 
-  console.log(outputText);
+  return outputText;
 }
 
-doConvert(23);
+console.log(doConvert(0)); 
 
 
 //-----------------------------------------------------------------------------------------------------------
@@ -138,17 +144,17 @@ console.log(val);
 
 let ipAddress = [
   '0.0.0.0',
-  '192.158.1.38',
-  '255.255.255.255',
-  '192.258.1.38',
+  '192.158.1.238',
+  '250.125.5.25',
+  '119.252.1.55',
   '125.22.1.55',
-  '111.0.0.256',
-  '101,25.1.',
+  '256.10.0.45',
+  '101,25.1.76',
 ];
 
 for (let i = 0; i < ipAddress.length; i++) {
   let val = ipAddress[i].split('.');
-  // console.log(val);
+  console.log(val);
   for (let j = 0; j < val.length; j++) {
     if ((+val[j] > 255 && +val[j] >= 0) || (+val[j] <= 255 && +val[j] < 0)) {
       console.log(`IP address is not valid ${ipAddress[i]}`);

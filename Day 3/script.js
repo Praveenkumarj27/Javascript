@@ -8,9 +8,9 @@ function reverseNum(num) {
     num = Math.floor(num / 10);
   }
 
-  return reverse;
+  console.log(reverse)
 }
-console.log(reverseNum(876));
+reverseNum(876);
 
 //------------------------------------------------------------------------------------------------------------------
 // nested object
