@@ -156,7 +156,7 @@ for (let i = 0; i < ipAddress.length; i++) {
   let val = ipAddress[i].split('.');
   console.log(val);
   for (let j = 0; j < val.length; j++) {
-    if ((+val[j] > 255 && +val[j] >= 0) || (+val[j] <= 255 && +val[j] < 0)) {
+    if ((parseInt(val[j]) > 255 && +val[j] >= 0) || (+val[j] <= 255 && +val[j] < 0)) {
       console.log(`IP address is not valid ${ipAddress[i]}`);
     }
   }
