@@ -1,5 +1,5 @@
 // console.dir()
-//       The method console.dir() displays an interactive list of the properties of the specified JavaScript
+//       The method console.dir() shows an interactive list of the properties of the specified JavaScript
 // object.The output is presented as a hierarchical listing with disclosure triangles that let you see the 
 // contents of child objects
      var person ={
@@ -35,13 +35,13 @@ typeof(str)                     // string
 // convert boolean to string
 var a=true
 var string=String(a);
-console.log(s)                // true
+console.log(string)                // true
 typeof(string)                     // string
 
 // convert boolean to number
 var number=Number(a)         
-console.log(n);               // Not a Number
-typeof(n)                     // number
+console.log(number);               // Not a Number
+typeof(number)                     // number
 
 // convert boolean to float
 var f=parseFloat(a) 
@@ -67,7 +67,7 @@ typeof(f)                      //number
 
     var a={name:"john"}
     var m = Object.create(a, { sub: {value: 'abc'} , std: {value: 'c'}})
-    console.log(m);
+    console.log(`the value of m ${m}`);
 
     const object1 = {  
         a: 1,  
@@ -80,7 +80,7 @@ typeof(f)                      //number
         i: 3  
       };    
         
-      const object2 = Object.assign({c: 4, d: 5}, object1);  
+      const object2 = Object.assign( object1,{c: 4, d: 5},);  
       const object4 = Object.assign({g: 34, h: 25}, object3);  
       console.log(object2.c, object2.d);    // 3,5
       console.log(object4.g, object4.h);    // 1,2
